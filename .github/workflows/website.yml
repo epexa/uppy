@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 16.x
       - name: Install dependencies
-        run: corepack yarn install --immutable
+        run: corepack yarn install
       - name: Build Uppy
         run: corepack yarn run build
       - name: Build website

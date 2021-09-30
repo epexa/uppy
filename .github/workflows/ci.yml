@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
       - name: Install dependencies
-        run: corepack yarn install --immutable
+        run: corepack yarn install
       - name: Run tests
         run: corepack yarn run test:unit
 
@@ -43,7 +43,7 @@ jobs:
         with:
           node-version: 16.x
       - name: Install dependencies
-        run: corepack yarn install --immutable
+        run: corepack yarn install
       - name: Run linter
         run: corepack yarn run lint
 
@@ -64,7 +64,7 @@ jobs:
         with:
           node-version: 14.x
       - name: Install dependencies
-        run: corepack yarn install --immutable
+        run: corepack yarn install
       - name: Run linter
         run: corepack yarn run lint:markdown
 
@@ -85,7 +85,7 @@ jobs:
         with:
           node-version: 16.x
       - name: Install dependencies
-        run: corepack yarn install --immutable
+        run: corepack yarn install
         # Need to do a bunch of work to generate the locale typings 🙃
       - name: Prepare type declarations
         run: |
